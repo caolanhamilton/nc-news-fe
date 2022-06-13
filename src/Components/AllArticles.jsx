@@ -1,11 +1,12 @@
-import {fetchAllArticles} from '../Utils/ApiCalls';
+import {fetchArticles} from '../Utils/ApiCalls';
 import { useEffect, useState } from 'react';
+import { ArticleCard } from './ArticleCard';
 
 export const AllArticles = () => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetchAllArticles().then((fetchedArticles) => {
+        fetchArticles().then((fetchedArticles) => {
             setArticles(fetchedArticles);
             setLoading(false);
         })
@@ -19,12 +20,7 @@ export const AllArticles = () => {
           <ul className='articlesList'>
               {articles.map((article) => { 
                     return (
-                        <li className='articleCard' key={article.id}>
-                            <h3 className='articleCardTitle'>{article.title}</h3>
-                            <h4 className='articleCardAuthor'>Post by {article.author}</h4>
-                            <p className='articleCardCommentCount'>Comment count: {article.comment_count}</p>
-                            <p className='articleCardTopic'>Topic: {article.topic}</p>
-                        </li>
+                        <ArticleCard article={article} />
                     )
               })}
           </ul>
