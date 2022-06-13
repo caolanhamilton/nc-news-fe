@@ -12,7 +12,6 @@ export const AllArticles = () => {
     }, [])
     
     if (loading) return <p>Loading articles...</p>
-    console.log(articles)
     
   return (
     <>
