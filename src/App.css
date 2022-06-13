@@ -2,11 +2,38 @@
   text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Article list layout */
+.articlesList {
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+}
+
+.articleCard {
+  display: list-item;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  list-style: none;
+  width: 60%;
+  background-color: aqua;
+  border: 5px black solid;
+  border-radius: 1rem;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .articleCard {
+  margin: 1rem;
+  flex: auto;
+  list-style: none;
+  flex-basis: 25%;
+}
+
+.articlesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 }
