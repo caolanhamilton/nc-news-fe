@@ -8,7 +8,7 @@ export const NewComment = ({ articleID }) => {
   const [commentText, setCommentText] = useState("");
   const [postBtnDisabled, setPostBtnDisabled] = useState(false);
   const [postBtnText, setPostBtnText] = useState("Post");
-  const [postSuccess, setPostSuccess] = useState(true);
+  const [postSuccess, setPostSuccess] = useState(false);
 
   const handleChange = (event) => {
     const value = event.target.value;
@@ -49,7 +49,7 @@ export const NewComment = ({ articleID }) => {
       {postSuccess ? (
         <p>Comment posted!</p>
       ) : (
-        <p>Comment could not be posted</p>
+        <p>You have not posted a comment.</p>
       )}
     </>
   );
