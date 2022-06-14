@@ -20,14 +20,14 @@ export const ArticlesByTopic = () => {
   }, [topic]);
 
   if (loading) return <p>Loading articles...</p>;
-  if (error) return <h2>Error loading articles... 😢</h2>;
+  if (error) return <h2>Error loading articles... <span aria-hidden="true">😢</span></h2>;
 
   return (
     <>
       <h2 className="articleTopicSubHeading">Articles about {topic}</h2>
       <ul className="articlesList">
         {articlesInTopic.map((article) => {
-          return <ArticleCard article={article} />;
+          return <ArticleCard article={article} key={article.article_id} />;
         })}
       </ul>
     </>

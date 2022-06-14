@@ -17,7 +17,11 @@ export const TopicPicker = () => {
   });
 
   if (loading) return <p>Loading topics...</p>;
-  if (error) return <h2>Error loading topics... 😢</h2>;
+  if (error) return (
+    <h2>
+      Error loading topics... <span aria-hidden="true">😢</span>
+    </h2>
+  );
 
   return (
     <nav className="topicNav">

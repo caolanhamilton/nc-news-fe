@@ -21,7 +21,11 @@ export const SingleArticle = () => {
   }, [articleID]);
 
   if (loading) return <p>Loading article...</p>;
-  if (error) return <h2>Error loading article... 😢</h2>;
+  if (error) return (
+    <h2>
+      Error loading article... <span aria-hidden="true">😢</span>
+    </h2>
+  );
 
   return (
     <>

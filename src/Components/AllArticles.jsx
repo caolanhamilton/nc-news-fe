@@ -19,7 +19,11 @@ export const AllArticles = () => {
   }, []);
 
   if (loading) return <p>Loading articles...</p>;
-  if (error) return <h2>Error loading articles... 😢</h2>;
+  if (error) return (
+    <h2>
+      Error loading articles... <span aria-hidden="true">😢</span>
+    </h2>
+  );
 
   return (
     <>
