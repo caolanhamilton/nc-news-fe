@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { UserContext } from "../Contexts/User";
 import { postComment } from "../Utils/ApiCalls";
