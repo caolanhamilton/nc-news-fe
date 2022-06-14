@@ -7,15 +7,21 @@ export const SingleArticle = () => {
   const { articleID } = useParams();
   const [article, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetchArticleById(articleID).then((article) => {
       setArticle(article);
       setLoading(false);
-    });
+    })
+      .catch((err) => { 
+        setError(true);
+        setLoading(false);
+      });
   }, [articleID]);
 
   if (loading) return <p>Loading article...</p>;
+  if (error) return <h2>Error loading article... 😢</h2>;
 
   return (
     <>
