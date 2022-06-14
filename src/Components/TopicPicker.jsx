@@ -3,14 +3,25 @@ import { Link } from "react-router-dom";
 import { fetchTopics } from "../Utils/ApiCalls";
 export const TopicPicker = () => {
   const [topics, setTopics] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetchTopics().then((topics) => {
       setTopics(topics);
+      setLoading(false);
+    }).catch(() => {
+      setError(true);
+      setLoading(false);
     });
   });
 
-  if (topics.length === 0) return <p>Loading topics...</p>;
+  if (loading) return <p>Loading topics...</p>;
+  if (error) return (
+    <h2>
+      Error loading topics... <span aria-hidden="true">😢</span>
+    </h2>
+  );
 
   return (
     <nav className="topicNav">
