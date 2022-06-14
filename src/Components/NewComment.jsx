@@ -23,11 +23,13 @@ export const NewComment = ({ articleID }) => {
     postComment(username, commentText, articleID)
       .then(() => {
         setPostBtnDisabled(false);
-        setPostBtnText("Post");
+          setPostBtnText("Post");
+          setPostSuccess(true);
       })
       .catch((err) => {
         setPostBtnDisabled(false);
-        setPostBtnText("Post");
+          setPostBtnText("Post");
+          setPostSuccess(false);
       });
     setCommentText("");
   };
