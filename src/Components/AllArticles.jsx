@@ -19,7 +19,6 @@ export const AllArticles = () => {
       <h2 className="articleTopicSubHeading">All Articles</h2>
       <ul className="articlesList">
         {articles.map((article) => {
-          console.log(article);
           return <ArticleCard article={article} key={article.article_id} />;
         })}
       </ul>

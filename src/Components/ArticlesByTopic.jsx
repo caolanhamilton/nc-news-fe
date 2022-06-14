@@ -17,7 +17,6 @@ export const ArticlesByTopic = () => {
 
   if (loading) return <p>Loading articles...</p>;
 
-  console.log(topic);
   return (
     <>
       <h2 className="articleTopicSubHeading">Articles about {topic}</h2>
