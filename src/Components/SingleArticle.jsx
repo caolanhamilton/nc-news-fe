@@ -2,26 +2,32 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { fetchArticleById } from "../Utils/ApiCalls";
 import { getTimeDate } from "../Utils/getTimeDate";
+import { Voter } from "./Voter";
+
 
 export const SingleArticle = () => {
   const { articleID } = useParams();
   const [article, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [articleLoadingError, setArticleLoadingError] = useState(false);
+  const [articleVotingError, setArticleVotingError] = useState(false);
+  const [vote, setVote] = useState(article.vote);
 
   useEffect(() => {
     fetchArticleById(articleID).then((article) => {
       setArticle(article);
+      setVote(article.votes);
       setLoading(false);
     })
-      .catch((err) => { 
-        setError(true);
+      .catch((err) => {
+        setArticleLoadingError(true);
         setLoading(false);
       });
   }, [articleID]);
 
+
   if (loading) return <p>Loading article...</p>;
-  if (error) return (
+  if (articleLoadingError) return (
     <h2>
       Error loading article... <span aria-hidden="true">😢</span>
     </h2>
@@ -35,8 +41,9 @@ export const SingleArticle = () => {
       </h3>
       <article className="singleArticleBody">{article.body}</article>
       <h4 className="singleArticleStats">
-        Votes: {article.votes} Comments:{article.comment_count}
+        Votes: { articleVotingError ? 'Vote could not be sent' : vote} Comments:{article.comment_count}
       </h4>
+      <Voter articleID={articleID} setVote={setVote} setArticleVotingError={setArticleVotingError} ></Voter>
     </>
   );
 };
