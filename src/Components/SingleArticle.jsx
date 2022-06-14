@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchArticleById } from "../Utils/ApiCalls";
 import { getTimeDate } from "../Utils/getTimeDate";
 import { Voter } from "./Voter";
+import { CommentFeed } from "./CommentFeed";
 
 
 export const SingleArticle = () => {
@@ -36,14 +37,20 @@ export const SingleArticle = () => {
   return (
     <>
       <h2 className="singleArticleTitle">{article.title}</h2>
+      <article className="singleArticleBody">{article.body}</article>
       <h3 className="singleArticleByline">
         by {article.author} @ {getTimeDate(article.created_at)}
       </h3>
-      <article className="singleArticleBody">{article.body}</article>
       <h4 className="singleArticleStats">
-        Votes: { articleVotingError ? 'Vote could not be sent' : vote} Comments:{article.comment_count}
+        Votes: {articleVotingError ? "Vote could not be sent" : vote} Comments:
+        {article.comment_count}
       </h4>
-      <Voter articleID={articleID} setVote={setVote} setArticleVotingError={setArticleVotingError} ></Voter>
+      <Voter
+        articleID={articleID}
+        setVote={setVote}
+        setArticleVotingError={setArticleVotingError}
+      ></Voter>
+      <CommentFeed articleID={articleID}></CommentFeed>
     </>
   );
 };
