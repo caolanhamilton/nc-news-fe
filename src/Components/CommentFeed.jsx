@@ -13,13 +13,14 @@ export const CommentFeed = ({ articleID }) => {
         setCommentFeed(comments);
         setLoading(false);
       })
-      .catch((err) => {
+      .catch(() => {
         setError(true);
         setLoading(false);
       });
   });
 
-  if (loading) return <p>Loading comments...</p>;
+    if (loading) return <p>Loading comments...</p>;
+    if (error) return <h2>Error loading comments...</h2>;
 
   return (
     <>
