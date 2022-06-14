@@ -32,5 +32,12 @@ export const patchArticleVotesById = (articleID, num) => {
     });
 }
 
+export const fetchCommentsByArticleId = (articleID) => { 
+    return ncNewsBackend.get(`/articles/${articleID}/comments`)
+        .then((response) => { 
+        return response.data.comments;
+        })
+}
+
 
 
