@@ -6,14 +6,16 @@ import { getTimeDate } from "../Utils/getTimeDate";
 export const SingleArticle = () => {
   const { articleID } = useParams();
   const [article, setArticle] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchArticleById(articleID).then((article) => {
       setArticle(article);
+      setLoading(false);
     });
   }, [articleID]);
 
-  if (article.length === 0) return <p>Loading article...</p>;
+  if (loading) return <p>Loading article...</p>;
 
   return (
     <>
