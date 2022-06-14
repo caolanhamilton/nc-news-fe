@@ -4,6 +4,7 @@
 
 .mainHeader {
   font-size: 4rem;
+  margin-bottom: 0px;
 }
 
 /* Top navigator styling */
@@ -33,10 +34,22 @@
   font-size: 1rem;
 }
 
+.userNameDisplay {
+  font-size: 0.7rem;
+  font-weight: normal;
+  text-align: right;
+  margin-right: 10px;
+}
+
 @media screen and (min-width: 600px) {
   .navLink {
     font-size: 1.5rem;
   }
+  .userNameDisplay {
+  font-size: 1rem;
+  margin-right: 1.5rem;
+}
+
 }
 
 .topicNav a:hover {
