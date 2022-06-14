@@ -18,8 +18,7 @@ export const ArticlesByTopic = () => {
     console.log(topic)
     return (
       <>
-        <h1>NC News</h1>
-        <h2>Articles about {topic}</h2>
+        <h2 className="articleTopicSubHeading">Articles about {topic}</h2>
         <ul className="articlesList">
           {articlesInTopic.map((article) => {
             return <ArticleCard article={article} />;

@@ -17,3 +17,11 @@ export const fetchTopics = () => {
         return response.data.topics;
     });
 }
+
+export const fetchArticleById = (articleID) => { 
+    return ncNewsBackend.get(`/articles/${articleID}`)
+        .then((response) => {
+        return response.data.articleObj;
+    });
+}
+
