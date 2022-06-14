@@ -25,3 +25,12 @@ export const fetchArticleById = (articleID) => {
     });
 }
 
+export const patchArticleVotesById = (articleID, num) => {
+    return ncNewsBackend.patch(`/articles/${articleID}`, {inc_votes : num})
+        .then((response) => {
+        return response.data.votes;
+    });
+}
+
+
+
