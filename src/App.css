@@ -46,10 +46,9 @@
     font-size: 1.5rem;
   }
   .userNameDisplay {
-  font-size: 1rem;
-  margin-right: 1.5rem;
-}
-
+    font-size: 1rem;
+    margin-right: 1.5rem;
+  }
 }
 
 .topicNav a:hover {
@@ -58,6 +57,10 @@
 }
 
 /* Article list layout */
+
+.articleCardTitle {
+  color: black;
+}
 .articleTopicSubHeading {
   font-size: 1.8rem;
   font-weight: bold;
@@ -154,7 +157,7 @@
   margin-right: 2rem;
   text-align: center;
   background-color: rgb(76, 155, 158);
-  border-radius:10px;
+  border-radius: 10px;
   padding: 1rem;
   color: white;
 }
@@ -163,7 +166,8 @@
   margin-top: 0.5rem;
 }
 
-.commentCardList {
+
+.commentList {
   flex-direction: column;
   justify-content: center;
   padding: 0px;
@@ -175,12 +179,39 @@
   margin-right: auto;
   margin-bottom: 1rem;
   list-style: none;
-  width: 80%;
+  width: 90%;
   background-color: rgb(100, 205, 189);
   border: 5px black solid;
   border-radius: 1rem;
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  .commentCardAuthor {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+ .commentCard {
+    margin: 1rem;
+    flex: auto;
+    list-style: none;
+    max-width: 30%;
+ }
+
+  .commentList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
 }
 
 .commentInput {
@@ -208,30 +239,21 @@
   background-color: rgb(76, 155, 158);
 }
 
-@media only screen and (min-width: 600px) {
-  .commentCardAuthor {
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .commentCard {
-    margin: 1rem;
-    flex: auto;
-    list-style: none;
-    flex-basis: 25%;
-    min-width: 40%;
-    max-width: 40%;
-  }
-
-  .commentCardList {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 70%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.deleteCommentBtn {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  background-color: rgb(205, 100, 112);
+  color: white;
+  padding: 12px;
+  margin-bottom: 0.5rem;
+  border-radius: 20px;
+  border: rgb(255, 255, 255);
+  font-size: 1.2rem;
 }
+
+.deleteCommentBtn:hover {
+  color: black;
+  background-color: rgb(220, 181, 183);
+}
+
