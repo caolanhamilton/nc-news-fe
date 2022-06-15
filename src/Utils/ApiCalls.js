@@ -62,7 +62,3 @@ export const postComment = (username, body, articleID) => {
     body: body,
   });
 };
-
-export const deleteComment = (commentID) => { 
-  return ncNewsBackend.delete(`/comments/${commentID}`);
-}

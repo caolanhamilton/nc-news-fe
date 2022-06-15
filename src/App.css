@@ -46,9 +46,10 @@
     font-size: 1.5rem;
   }
   .userNameDisplay {
-    font-size: 1rem;
-    margin-right: 1.5rem;
-  }
+  font-size: 1rem;
+  margin-right: 1.5rem;
+}
+
 }
 
 .topicNav a:hover {
@@ -153,7 +154,7 @@
   margin-right: 2rem;
   text-align: center;
   background-color: rgb(76, 155, 158);
-  border-radius: 10px;
+  border-radius:10px;
   padding: 1rem;
   color: white;
 }
@@ -205,24 +206,6 @@
 
 .postButton:hover {
   background-color: rgb(76, 155, 158);
-}
-
-.deleteCommentBtn {
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  text-align: center;
-  background-color: rgb(205, 100, 112);
-  color: white;
-  padding: 12px;
-  margin-bottom: 0.5rem;
-  border-radius: 20px;
-  border: rgb(255, 255, 255);
-  font-size: 1.2rem;
-}
-
-.deleteCommentBtn:hover {
-  color:black;
-  background-color: rgb(220, 181, 183);
 }
 
 @media only screen and (min-width: 600px) {
