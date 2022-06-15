@@ -26,13 +26,12 @@ export const CommentFeed = ({ articleID }) => {
   return (
     <>
       <h2 className="commentsSectionTitle">Comments</h2>
-      <ul className="commentCardList">
+      <ul className="commentList">
         {commentsArr.map((comment) => {
           return (
             <CommentCard
               comment={comment}
               key={comment.comment_id}
-              className="commentCard"
             ></CommentCard>
           );
         })}
