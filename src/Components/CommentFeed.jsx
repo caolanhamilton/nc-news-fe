@@ -2,6 +2,7 @@ import { fetchCommentsByArticleId } from "../Utils/ApiCalls";
 import { useState, useEffect } from "react";
 import { CommentCard } from "./CommentCard";
 
+
 export const CommentFeed = ({ articleID }) => {
   const [commentsArr, setCommentFeed] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -4,6 +4,7 @@ import { fetchArticleById } from "../Utils/ApiCalls";
 import { getTimeDate } from "../Utils/getTimeDate";
 import { Voter } from "./Voter";
 import { CommentFeed } from "./CommentFeed";
+import { NewComment } from "./NewComment";
 
 
 export const SingleArticle = () => {
@@ -50,6 +51,7 @@ export const SingleArticle = () => {
         setVote={setVote}
         setArticleVotingError={setArticleVotingError}
       ></Voter>
+      <NewComment articleID={articleID}></NewComment>
       <CommentFeed articleID={articleID}></CommentFeed>
     </>
   );

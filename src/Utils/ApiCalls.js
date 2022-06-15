@@ -39,5 +39,8 @@ export const fetchCommentsByArticleId = (articleID) => {
         })
 }
 
+export const postComment = (username, body, articleID) => { 
+    return ncNewsBackend.post(`/articles/${articleID}/comments`, {'username': username, 'body': body})
+}
 
 
