@@ -5,6 +5,7 @@ import { getTimeDate } from "../Utils/getTimeDate";
 import { Voter } from "./Voter";
 import { CommentFeed } from "./CommentFeed";
 import { NewComment } from "./NewComment";
+import { Error } from "./Error";
 
 
 export const SingleArticle = () => {
@@ -22,7 +23,7 @@ export const SingleArticle = () => {
       setLoading(false);
     })
       .catch((err) => {
-        setArticleLoadingError(true);
+        setArticleLoadingError(err);
         setLoading(false);
       });
   }, [articleID]);
@@ -30,9 +31,7 @@ export const SingleArticle = () => {
 
   if (loading) return <p>Loading article...</p>;
   if (articleLoadingError) return (
-    <h2>
-      Error loading article... <span aria-hidden="true">😢</span>
-    </h2>
+    <Error error={articleLoadingError}></Error>
   );
 
   return (
