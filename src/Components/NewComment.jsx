@@ -40,9 +40,10 @@ export const NewComment = ({ articleID }) => {
           value={commentText}
           onChange={handleChange}
           placeholder="Type a comment..."
+          className="commentInput"
           required
         ></input>
-        <button className="buttons" disabled={postBtnDisabled}>
+        <button className="postButton" disabled={postBtnDisabled}>
           {postBtnText}
         </button>
       </form>

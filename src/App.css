@@ -183,6 +183,31 @@
   color: black;
 }
 
+.commentInput {
+  height: 3rem;
+  width: 40%;
+  margin: 10px;
+  border-radius: 30px;
+  color: rgb(100, 205, 189);
+  border-color: rgb(100, 205, 189);
+}
+
+.postButton {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  background-color: rgb(100, 205, 189);
+  color: white;
+  padding: 12px;
+  border-radius: 20px;
+  border: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+
+.postButton:hover {
+  background-color: rgb(76, 155, 158);
+}
+
 @media only screen and (min-width: 600px) {
   .commentCardAuthor {
     color: black;
