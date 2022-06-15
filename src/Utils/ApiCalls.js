@@ -18,12 +18,10 @@ export const fetchArticles = (topic, sortOrder, sortParameter) => {
       'sort_by': sortParameter,
     };
   }
-    console.log(filters)
 
   return ncNewsBackend
     .get("/articles", { params: filters })
       .then((response) => {
-        console.log(response.data.articles);
       return response.data.articles;
     });
 };
