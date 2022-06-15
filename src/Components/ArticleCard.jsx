@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getTimeDate } from "../Utils/getTimeDate";
 
 export const ArticleCard = ({ article }) => {
   return (
@@ -7,8 +8,10 @@ export const ArticleCard = ({ article }) => {
         <h4 className="articleCardAuthor">Post by {article.author}</h4>
         <p className="articleCardCommentCount">
           Comment count: {article.comment_count}
-        </p>
-        <p className="articleCardTopic">Topic: {article.topic}</p>
+      </p>
+      <p>Votes: {article.votes}</p>
+      <p className="articleCardTopic">Topic: {article.topic}</p>
+      <p>Created at {getTimeDate(article.created_at)}</p>
     </Link>
   );
 };
