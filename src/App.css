@@ -57,6 +57,10 @@
 }
 
 /* Article list layout */
+
+.articleCardTitle {
+  color: black;
+}
 .articleTopicSubHeading {
   font-size: 1.8rem;
   font-weight: bold;

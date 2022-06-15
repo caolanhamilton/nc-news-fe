@@ -19,7 +19,7 @@ export const CommentCard = ({ comment }) => {
   }
   return (
     <li className="commentCard">
-      <h3 className="commentCardAuthor">{`Posted by: ${comment.author}`}</h3>
+      <h3 className="commentCardAuthor">{`Posted by: ${comment.author}` }</h3>
       <h4 className="commentCardTime">{`@ ${getTimeDate(
         comment.created_at
       )}`}</h4>
