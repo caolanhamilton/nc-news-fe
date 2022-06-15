@@ -2,6 +2,7 @@ import { fetchArticles } from "../Utils/ApiCalls";
 import { useEffect, useState } from "react";
 import { ArticleCard } from "./ArticleCard";
 import { ArticleSorter } from "./ArticleSorter";
+import { Error } from "./Error";
 
 export const AllArticles = () => {
   const [articles, setArticles] = useState([]);
@@ -16,16 +17,14 @@ export const AllArticles = () => {
         setLoading(false);
       })
       .catch((err) => {
-        setError(true);
+        setError(err);
         setLoading(false);
       });
   }, [sortOrder, sortParameter]);
 
   if (loading) return <p>Loading articles...</p>;
   if (error) return (
-    <h2>
-      Error loading articles... <span aria-hidden="true">😢</span>
-    </h2>
+   <Error error={error}></Error>
   );
 
   return (

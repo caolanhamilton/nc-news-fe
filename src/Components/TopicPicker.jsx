@@ -10,8 +10,8 @@ export const TopicPicker = () => {
     fetchTopics().then((topics) => {
       setTopics(topics);
       setLoading(false);
-    }).catch(() => {
-      setError(true);
+    }).catch((error) => {
+      setError(error);
       setLoading(false);
     });
   });

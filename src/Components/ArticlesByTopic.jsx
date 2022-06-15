@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchArticles } from "../Utils/ApiCalls";
 import { ArticleCard } from "./ArticleCard";
 import { ArticleSorter } from "./ArticleSorter";
+import { Error } from "./Error";
 
 export const ArticlesByTopic = () => {
   const { topic } = useParams();
@@ -16,14 +17,14 @@ export const ArticlesByTopic = () => {
     fetchArticles(topic, sortOrder, sortParameter).then((articlesInTopic) => {
       setArticlesInTopic(articlesInTopic);
       setLoading(false);
-    }).catch(() => {
-      setError(true);
+    }).catch((err) => {
+      setError(err);
       setLoading(false);
     });
   }, [topic, sortOrder, sortParameter]);
 
   if (loading) return <p>Loading articles...</p>;
-  if (error) return <h2>Error loading articles... <span aria-hidden="true">😢</span></h2>;
+  if (error) return <Error error={error}></Error>;
 
   return (
     <>
