@@ -41,7 +41,7 @@
   margin-right: 10px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .navLink {
     font-size: 1.5rem;
   }
@@ -80,7 +80,7 @@
   margin-right: auto;
   margin-bottom: 1rem;
   list-style: none;
-  width: 60%;
+  width: 80%;
   background-color: rgb(100, 205, 189);
   border: 5px black solid;
   border-radius: 1rem;
@@ -88,7 +88,7 @@
   color: white;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .articleTopicSubHeading {
     font-size: 2.6rem;
     font-weight: bold;
@@ -130,7 +130,7 @@
   margin-right: 10%;
   text-align: left;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .singleArticleBody {
     margin-left: 20%;
     margin-right: 20%;
@@ -188,7 +188,7 @@
   color: white;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
   .commentCardAuthor {
     color: black;
     font-size: 1.5rem;
@@ -201,14 +201,14 @@
     margin: 1rem;
     flex: auto;
     list-style: none;
-    max-width: 30%;
+    max-width: 40%;
  }
 
   .commentList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 80%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
