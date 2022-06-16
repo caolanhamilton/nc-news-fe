@@ -31,7 +31,7 @@ If you'd like to run the app locally you can clone this repo by pasting the foll
 
 ## Minimum requirements and dependencies
 
-Northcoders News was made using node v17.1.0, it is recommended you use at least this version to run the app locally. You can download node [here].(https://nodejs.org/en/download/current/).
+Northcoders News was made using node v17.1.0, it is recommended you use at least this version to run the app locally. You can download node [here](https://nodejs.org/en/download/current/).
 
 Once you have a local copy of the repo and Node installed you will need to install a few dependencies. I have listed these packages below along with the command to install them:
 
