@@ -1,70 +1,44 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# What is Northcoders News?
 
-In the project directory, you can run:
+Northcoders News is a mobile-first web application made with React. It is designed to be the front-end of a news app with similar functionality to Reddit.com. The app consumes my [Northrcoders News API](https://github.com/caolanhamilton/NC-News) to fetch its data.
 
-### `npm start`
+The home page of the app presents users with a preview of all articles which can be filtered by topic using the nav bar and reordered using the drop-down menus. Clicking on an article preview brings the user to an article page, where the full article text is displayed. The user can like or dislike the article they are reading and also create, view and delete comments. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The App makes use of:
+ - React Hooks like useState useEffect and useContext
+ - React Router
+ - API data fetching with Axios
+ - Responsive CSS and mobile first design
+ - Form validation
+ - Optimistic rendering
+ - Conditional rendering
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live version!
 
-### `npm test`
+You can find a live version of Northcoders News hosted on Netlify by clicking here:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[https://caolanhamiltonncnewsfrontend.netlify.app/](https://caolanhamiltonncnewsfrontend.netlify.app/)
 
-### `npm run build`
+You can view the app using any modern mobile or desktop browser such as Chrome or Safari.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Cloning & running locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you'd like to run the app locally you can clone this repo by pasting the following code snippet into your terminal.  Ensure you are inside the directory you wish to clone into first.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    git clone https://github.com/caolanhamilton/nc-news-fe.git
 
-### `npm run eject`
+## Minimum requirements and dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Northcoders News was made using node v17.1.0, it is recommended you use at least this version to run the app locally. You can download node [here].(https://nodejs.org/en/download/current/).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once you have a local copy of the repo and Node installed you will need to install a few dependencies. I have listed these packages below along with the command to install them:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ - axios: `npm  i axios`
+ - dayjs `npm i -d jest-extended`
+ - react-dom `npm i react-dom`
+ - react-router-dom `npm i react-router-dom`
+ - react-scripts `npm i react-scripts`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You are now ready to run the app! Open terminal, `cd` into the directory where you cloned the app and run the command `npm start`. The app should now run in your browser.
