@@ -7,7 +7,7 @@ Northcoders News is a mobile-first web application made with React. It is design
 The home page of the app presents users with a preview of all articles which can be filtered by topic using the nav bar and reordered using the drop-down menus. Clicking on an article preview brings the user to an article page, where the full article text is displayed. The user can like or dislike the article they are reading and also create, view and delete comments. 
 
 The App makes use of:
- - React Hooks like useState useEffect and useContext
+ - React Hooks like useState, useEffect and useContext
  - React Router
  - API data fetching with Axios
  - Responsive CSS and mobile first design
@@ -31,7 +31,7 @@ If you'd like to run the app locally you can clone this repo by pasting the foll
 
 ## Minimum requirements and dependencies
 
-Northcoders News was made using node v17.1.0, it is recommended you use at least this version to run the app locally. You can download node [here].(https://nodejs.org/en/download/current/).
+Northcoders News was made using Node v17.1.0, it is recommended you use at least this version to run the app locally. You can download Node [here](https://nodejs.org/en/download/current/).
 
 Once you have a local copy of the repo and Node installed you will need to install a few dependencies. I have listed these packages below along with the command to install them:
 
