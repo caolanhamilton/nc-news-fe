@@ -7,7 +7,7 @@ Northcoders News is a mobile-first web application made with React. It is design
 The home page of the app presents users with a preview of all articles which can be filtered by topic using the nav bar and reordered using the drop-down menus. Clicking on an article preview brings the user to an article page, where the full article text is displayed. The user can like or dislike the article they are reading and also create, view and delete comments. 
 
 The App makes use of:
- - React Hooks like useState useEffect and useContext
+ - React Hooks like useState, useEffect and useContext
  - React Router
  - API data fetching with Axios
  - Responsive CSS and mobile first design
