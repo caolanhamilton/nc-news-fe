@@ -34,14 +34,14 @@ export const Voter = ({ articleID, setVote, setArticleVotingError }) => {
         onClick={handleUpVoteClick}
         disabled={disableUpVoteBtn}
       >
-        Up vote
+        <span className="material-symbols-outlined">thumb_up</span>
       </button>
       <button
         className="articleVoteBtn"
         onClick={handleDownVoteClick}
         disabled={disableDownVoteBtn}
       >
-        Down vote
+        <span className="material-symbols-outlined">thumb_down</span>
       </button>
     </>
   );

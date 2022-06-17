@@ -42,7 +42,9 @@ export const SingleArticle = () => {
         by {article.author} @ {getTimeDate(article.created_at)}
       </h3>
       <h4 className="singleArticleStats">
-        Votes: {articleVotingError ? "Vote could not be sent" : vote} Comments:
+        <span className="material-symbols-outlined">thumbs_up_down</span>{" "}
+        {articleVotingError ? "Vote could not be sent" : vote}{" "}
+        <span className="material-symbols-outlined">comment</span>
         {article.comment_count}
       </h4>
       <Voter
