@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ncNewsBackend = axios.create({
-  baseURL: "https://ncnewscaolanhamilton.herokuapp.com/api",
+  baseURL: "https://nc-news-production.up.railway.app/api",
 });
 
 export const fetchArticles = (topic, sortOrder, sortParameter) => {
